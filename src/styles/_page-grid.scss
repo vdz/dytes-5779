@@ -1,0 +1,8 @@
+.Page {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 180px auto;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "header header header"
+        "related page material";
+}

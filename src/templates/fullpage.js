@@ -1,19 +1,46 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-//import './fullpage.scss';
+import '../styles/index.scss';
 
-class Fullpage extends React.Component{
+class Fullpage extends Component{
 
 	render() {
 		const { 
 			index, 
-			title
+			title, 
+			book, 
+			part,
+			summary,
+			pages,
+			pageSourceUrl_Scribd,
+			videoId_YouTube,
+			audioDownloadUrl,
+			questions
 		} = this.props.pageContext.page;
 
 		return (
-			<section>
-				<h1>{title}</h1>
+			<section className='DYTES'>
+				<header className='Header'></header>
+				<section className='Page'>
+					<div className='toolbar'>
+						<h1>{index} {title}</h1>
+						{book} {part} {pages}
+					</div>
+					<div className='material'>
+						{documentToReactComponents(summary)}
+						{videoId_YouTube}
+						{audioDownloadUrl}
+						{documentToReactComponents(questions)}
+					</div>
+					<div className='print'>
+						{pageSourceUrl_Scribd}
+					</div>
+					<div className='related'>
+						...
+					</div>
+				</section>
+				
 			</section>
 		);
 	}

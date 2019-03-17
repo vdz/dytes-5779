@@ -2,7 +2,20 @@
     width: 100%;
     display: grid;
     grid-template-rows: 180px auto;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: "header header header"
-        "related page material";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "header header header header"
+        "related page page material";
+
+        .toolbar {
+            grid-area: header;
+        }
+        .material {
+            grid-area: material;
+        }
+        .pdf {
+            grid-area: 'page';
+        }
+        .related {
+            grid-area: related;
+        }
 }

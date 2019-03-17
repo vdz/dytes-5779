@@ -11,8 +11,9 @@ exports.createPages = ({ graphql, actions }) => {
 	const { createPage } = actions;
 	const page_template = path.resolve('src/templates/fullpage.js');
 	return getConfig().then(config => {
+		console.log(JSON.stringify(config));
 		const current_index = config.items[0].fields.currentPageIndex;
-		console.log(`⌘ corrent index ${current_index}`, config.items);
+		console.log(`⌘ current index ${current_index}`, config.items);
 		return getPages().then(all_pages => {
 				//_ create a lesson index page
 				all_pages.items.forEach(item => {

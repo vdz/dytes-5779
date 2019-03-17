@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
+import ScribdContainer from './../components/ScribdContainer';
+
 import '../styles/index.scss';
 
 class Fullpage extends Component{
@@ -33,7 +35,7 @@ class Fullpage extends Component{
 						{audioDownloadUrl}
 						{documentToReactComponents(questions)}
 					</div>
-					<div className='print'>
+					<div className='pdf'>
 						{pageSourceUrl_Scribd}
 					</div>
 					<div className='related'>

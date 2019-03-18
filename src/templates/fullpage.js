@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-import ScribdContainer from './../components/ScribdContainer';
+import ScribdContainer from '../components/Scribd/ScribdContainer';
+import PageHead from '../components/PageHead/PageHead';
+import Summary from '../components/Summary/Summary';
+import Questions from '../components/Questions/Questions';
 
 import '../styles/index.scss';
 
@@ -14,6 +16,7 @@ class Fullpage extends Component{
 			book, 
 			part,
 			summary,
+			subject,
 			pages,
 			pageSourceUrl_Scribd,
 			videoId_YouTube,
@@ -23,20 +26,23 @@ class Fullpage extends Component{
 
 		return (
 			<section className='DYTES'>
-				<header className='Header'></header>
+				<header className='Header'>
+				</header>
 				<section className='Page'>
 					<div className='toolbar'>
-						<h1>{index} {title}</h1>
-						{book} {part} {pages}
+						<PageHead index={index} 
+							title={title}
+							book={book} 
+							part={part} 
+							pages={pages}
+							subject={subject} />
 					</div>
 					<div className='material'>
-						{documentToReactComponents(summary)}
-						{videoId_YouTube}
-						{audioDownloadUrl}
-						{documentToReactComponents(questions)}
+						<Summary content={summary} />
+						<Questions content={questions} />
 					</div>
 					<div className='pdf'>
-						{pageSourceUrl_Scribd}
+						<ScribdContainer title={title} url={pageSourceUrl_Scribd} />
 					</div>
 					<div className='related'>
 						...

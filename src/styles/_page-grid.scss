@@ -1,10 +1,12 @@
 .Page {
     width: 100%;
     display: grid;
-    grid-template-rows: 180px auto;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas: "header header header header"
-        "related page page material";
+    grid-template-rows: $page-header-height auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: $master-gutter;
+    grid-template-areas:    "header header header header"
+                            "material page page related"
+                            "footer footer footer footer";
 
         .toolbar {
             grid-area: header;
@@ -13,7 +15,7 @@
             grid-area: material;
         }
         .pdf {
-            grid-area: 'page';
+            grid-area: page;
         }
         .related {
             grid-area: related;

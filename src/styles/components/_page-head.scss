@@ -1,0 +1,31 @@
+.PageHead {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "back title title next";
+
+    .header {
+        grid-area: title;
+        text-align: center;
+
+        .title {
+            font-weight: $f-black;
+            font-size: 1.4rem;
+            line-height: 140%;
+            color: #999;
+            margin-bottom: $master-gutter;
+        }
+    }
+    .back-panel {
+        grid-area: back;
+        position: relative;
+    }
+    .next-panel {
+        grid-area: next;
+        position: relative;
+    }
+
+    .arrow {
+        font-size: 2rem;
+        border: none;
+    }
+}

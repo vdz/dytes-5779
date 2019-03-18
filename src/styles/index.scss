@@ -1,2 +1,54 @@
 @import './../../node_modules/reset-css/sass/reset';
+@import './config';
+@import './typography';
 @import './page-grid';
+@import './components/content';
+@import './components/page-head';
+@import './components/scribd';
+@import './components/summary';
+
+html {
+    direction: rtl;
+}
+
+body {
+    color: $brand-dark-1;
+    font-size: 14px;
+    line-height: 130%;
+    font-family: $font-base-sans-serif;
+    font-weight: $f-normal;
+    word-wrap: break-word;
+    font-kerning: normal;
+    -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+    -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+    -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+    font-feature-settings: "kern", "liga", "clig", "calt";
+  }
+
+  a {
+      color: #39f;
+      text-decoration: none;
+      border-bottom: 1px solid $link-color;
+      padding-bottom: 2px;
+      font-weight: $f-bold;
+
+      &:hover {
+          color: $link-color-hover;
+          border-width: 0;
+      }
+  }
+
+  p {
+      margin-bottom: $master-gutter/2;
+  }
+
+  .DYTES {
+      .Header {
+          height: $site-header-height;
+          background-color: #f9f9f9;
+      }
+
+      .Page {
+        padding: $master-gutter;
+      }
+  }

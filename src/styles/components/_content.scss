@@ -1,0 +1,26 @@
+.Content {
+
+    .title {
+        font-weight: $f-light;
+        font-size: 1.4rem;
+        margin-bottom: $master-gutter/2;
+        color: #999;
+    }
+
+    .content {
+        //border-right: 3px solid $color-accent-secondary;
+        //padding-right: $master-gutter;
+        //margin-right: $master-gutter;
+        margin-left: $master-gutter;
+        font-family: $font-base-serif;
+        font-size: 1rem;
+        line-height: 130%;
+        color: #555;
+        margin-bottom: $master-gutter;
+    }
+
+    ol {
+        padding-right: $master-gutter;
+        list-style-type: decimal;
+    }
+}

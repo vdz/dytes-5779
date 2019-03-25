@@ -48,6 +48,9 @@ class Fullpage extends Component {
 					</div>
 					<div className='related'>
 						...
+						<div>
+							נתרם ע״י ...
+						</div>
 					</div>
 				</section>
 				

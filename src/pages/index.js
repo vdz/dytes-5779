@@ -1,29 +1,11 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { addEntry } from '../modules/contentful_managment.api'
+import UserRegistration from '../components/UserRegistration/UserRegistration'
 
 import SEO from '../_archive/seo'
 
 import '../styles/index.scss';
 
-const DISPLAY_MODES = {
-    normal : 0,
-    processing : 1,
-    error : 2,
-    done : 3
-}
-
 class IndexPage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.name_ref = React.createRef();
-        this.email_ref = React.createRef();
-
-        this.state = {
-            mode : DISPLAY_MODES.normal,
-            message : ''
-        }
-    }
     render() {
         return (
             <section className='DYTES'>
@@ -35,26 +17,7 @@ class IndexPage extends React.Component {
                         <h1 className='title'>
                             הצטרפות ללימוד הדף היומי בתלמוד עשר הספירות
                         </h1>
-
-                        <div className={`registration mode-${this.state.mode}`}>
-                            {(this.state.mode !== DISPLAY_MODES.normal) && this.getMessage()}
-                            <label>שם מלא (פרטי משפחה)</label>
-                            <input type='text'
-                                   defaultValue=''
-                                   ref={this.name_ref} />
-                            <label>כתובת דואר אלקטרוני</label>
-                            <input type='email'
-                                   defaultValue=''
-                                   ref={this.email_ref} />
-                            <div className='footer'>
-                                <button className='register'
-                                        onClick={() => {
-                                            this.register()
-                                        }}>
-                                    הרשמה
-                                </button>
-                            </div>
-                        </div>
+                        <UserRegistration />
 
                         <div className='invitation'>
                             <p>שלום חברים יקרים</p>
@@ -105,63 +68,6 @@ class IndexPage extends React.Component {
                 </section>
             </section>
         )
-    }
-
-    getMessage() {
-        return (
-            <div className='message'>
-                {this.state.message}
-            </div>
-        )
-    }
-
-    register() {
-        this.setState({
-            mode: DISPLAY_MODES.normal
-        });
-
-        if (!this.name_ref.current.value) {
-            this.setState({
-                mode : DISPLAY_MODES.error,
-                message : 'אנא מלא את שמך המלא לצורך התקשרות'
-            });
-            return;
-        }
-
-        if (!this.email_ref.current.value) {
-            this.setState({
-                mode : DISPLAY_MODES.error,
-                message : 'אנא מלא את כתובת הדואל האלקטרוני שלך לצורך התקשרות'
-            });
-            return;
-        }
-
-        // ....
-        this.setState({
-            mode : DISPLAY_MODES.processing,
-            message : 'שומר נתונים'
-        });
-        addEntry('user', {
-            'name' : this.name_ref.current.value,
-            'email' : this.email_ref.current.value
-        }).then((res) => {
-            console.log('❦',res);
-            this.setState({
-                mode : DISPLAY_MODES.done,
-                message : 'תודה. שמרתנו ...'
-            });
-
-            this.name_ref.current.value = '';
-            this.email_ref.current.value = '';
-
-            setTimeout(() => {
-                this.setState({
-                    mode : DISPLAY_MODES.normal,
-                    message : ''
-                })
-            }, 3000);
-        })
-
     }
 }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import { TES_PARTS } from '../../modules/tes.helper';
+import UserRegistration from "../UserRegistration/UserRegistration";
 
 export default class PageHead extends Component {
   render() {
@@ -23,7 +24,7 @@ export default class PageHead extends Component {
         <div className='next-panel'>
             <Link className='next-link arrow' to='/'>←</Link>
             &nbsp;
-            <span>הירשם לניוזלטר</span>
+            <UserRegistration />
         </div>
       </section>
     )

@@ -1,4 +1,11 @@
 .Front {
+    .title {
+        font-weight: $f-light;
+        font-size: 2.5rem;
+        line-height: 110%;
+        margin: $master-gutter;
+    }
+
     .registration {
         position: relative;
         text-align: right;
@@ -8,7 +15,7 @@
         grid-auto-flow: column;
         grid-gap: $master-gutter/2;
         border-top: 1px solid $color-accent-secondary;
-        padding: $master-gutter $master-gutter*3 $master-gutter;
+        padding: $master-gutter 10% $master-gutter;
         align-items: center;
 
         &:before {
@@ -62,10 +69,11 @@
         position: relative;
         background-color: #f2f9ff;
         text-align: right;
+        font-size: 1rem;
         font-family: $font-base-serif;
         border-bottom: 1px solid $color-accent-secondary;
         border-top: 1px solid $color-accent-secondary;
-        padding: $master-gutter $master-gutter*3 $master-gutter/2;
+        padding: $master-gutter 10% $master-gutter/2;
 
         &:before {
             @extend %quick-title;
@@ -73,5 +81,12 @@
             width: $master-gutter*3;
             color: $color-accent-secondary;
         }
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 0.85rem;
+        color: #999;
+        padding: $master-gutter 10% $master-gutter/2;
     }
 }

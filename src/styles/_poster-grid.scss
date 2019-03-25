@@ -19,7 +19,7 @@
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas:    "top top top"
                             "left center right"
-                            "bottom-left bottom bottom-right";
+                            "bottom bottom bottom";
     justify-content: stretch;
     align-content: stretch;
 
@@ -33,10 +33,7 @@
         text-align: center;
     }
 
-    .title {
-        font-weight: $f-light;
-        font-size: 2.5rem;
-        line-height: 110%;
-        margin: $master-gutter;
+    .footer {
+        grid-area: bottom;
     }
 }

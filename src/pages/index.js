@@ -95,6 +95,10 @@ class IndexPage extends React.Component {
                                 בידידות ואהבת אמת,<br/>
                                 בית מדרש הסולם</p>
                         </div>
+
+                        <footer className='copyright'>
+                            שיעורים מאת הרב אדם סיני. הופק ע״י בית מדרש הסולם. כל הזכויות שמורות לרב אדם סיני.
+                        </footer>
                     </div>
                     <footer className='footer'>
                     </footer>

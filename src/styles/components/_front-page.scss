@@ -1,0 +1,77 @@
+.Front {
+    .registration {
+        position: relative;
+        text-align: right;
+        min-height: 100px;
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        grid-auto-flow: column;
+        grid-gap: $master-gutter/2;
+        border-top: 1px solid $color-accent-secondary;
+        padding: $master-gutter $master-gutter*3 $master-gutter;
+        align-items: center;
+
+        &:before {
+            @extend %quick-title;
+            content: 'הרשמה';
+            width: auto;
+            color: $color-accent-secondary;
+        }
+
+        label {
+            font-weight: $f-bold;
+            grid-row: 2;
+        }
+
+        input {
+            grid-row: 3;
+            font-size: 1rem;
+            padding: 4px;
+            color: $link-color;
+        }
+
+        button {
+            border-radius: 5px;
+            background-color: $link-color;
+            font-weight: $f-bold;
+            color: #fff;
+            border: none;
+            font-family: $font-base-sans-serif;
+            font-size: 1rem;
+            padding: 4px 20px;
+            outline: none;
+        }
+
+        .footer {
+            grid-column: 1 / 3;
+            grid-row: end;
+        }
+
+        .message {
+            grid-column: 1 / 3;
+            grid-row: 1;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            padding: $master-gutter/2;
+            background-color: #f5f5f5;
+        }
+
+    }
+
+    .invitation {
+        position: relative;
+        background-color: #f2f9ff;
+        text-align: right;
+        font-family: $font-base-serif;
+        border-bottom: 1px solid $color-accent-secondary;
+        border-top: 1px solid $color-accent-secondary;
+        padding: $master-gutter $master-gutter*3 $master-gutter/2;
+
+        &:before {
+            @extend %quick-title;
+            content: 'הזמנה';
+            width: $master-gutter*3;
+            color: $color-accent-secondary;
+        }
+    }
+}

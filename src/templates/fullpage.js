@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-import YouTube from 'react-youtube';
 import ScribdContainer from '../components/Scribd/ScribdContainer';
 import PageHead from '../components/PageHead/PageHead';
 import Summary from '../components/Summary/Summary';
 import Questions from '../components/Questions/Questions';
+import Video from '../components/Video/Video';
 
 import '../styles/index.scss';
 
-class Fullpage extends Component{
+class Fullpage extends Component {
 
 	render() {
 		const { 
@@ -40,10 +40,7 @@ class Fullpage extends Component{
 					</div>
 					<div className='material'>
 						<Summary content={summary} />
-						<YouTube videoId={videoId_YouTube}
-								 className='video'
-								 containerClassName='video-wrapper'
-								 opts={{height : '', width : ''}} />
+						<Video title={title} content={videoId_YouTube} />
 						<Questions content={questions} />
 					</div>
 					<div className='pdf'>

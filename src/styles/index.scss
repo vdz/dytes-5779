@@ -2,17 +2,23 @@
 @import './config';
 @import './typography';
 @import './page-grid';
+@import './poster-grid';
 @import './components/content';
 @import './components/page-head';
 @import './components/scribd';
 @import './components/summary';
 @import './components/questions';
+@import './components/video';
+@import './components/front-page';
+
 
 html {
     direction: rtl;
 }
 
 body {
+    height: auto;
+
     color: $brand-dark-1;
     font-size: 14px;
     line-height: 130%;
@@ -43,27 +49,28 @@ body {
       margin-bottom: $master-gutter/2;
   }
 
+  .hidden {
+      visibility: hidden;
+  }
+
   .DYTES {
+      display: grid;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      overflow: auto;
+
       .Header {
           height: $site-header-height;
           background-color: #f9f9f9;
       }
 
-      .Page {
-        padding: $master-gutter;
+      .Poster {
       }
 
-      .video-wrapper {
-          position: relative;
-          padding-bottom: 56.25%; /* 16:9 */
-          padding-top: 25px;
-          height: 0;
-      }
-      .video {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
+      .Page {
+          padding: $master-gutter;
       }
   }

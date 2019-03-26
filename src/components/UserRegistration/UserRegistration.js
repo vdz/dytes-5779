@@ -24,7 +24,7 @@ export default class UserRegistration extends React.Component {
         return (
             <div className={`Registration mode-${this.state.mode}`}>
                 {(this.state.mode !== DISPLAY_MODES.normal) && this.getMessage()}
-                <label>שם מלא (פרטי משפחה)</label>
+                <label>שם מלא (פרטי ומשפחה)</label>
                 <input type='text'
                        defaultValue=''
                        ref={this.name_ref} />

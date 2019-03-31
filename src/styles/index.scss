@@ -1,7 +1,7 @@
 @import './../../node_modules/reset-css/sass/reset';
 @import './config';
 @import './typography';
-@import './page-grid';
+@import './page';
 @import './poster-grid';
 @import './components/content';
 @import './components/page-head';
@@ -11,6 +11,8 @@
 @import './components/video';
 @import './components/front-page';
 @import './components/user-registration';
+@import './components/feedback';
+@import './components/_dedication';
 
 html {
     direction: rtl;
@@ -63,6 +65,8 @@ body {
       overflow: auto;
 
       .Header {
+          display: flex;
+          justify-content: center;
           height: $site-header-height;
           background-color: #f9f9f9;
       }

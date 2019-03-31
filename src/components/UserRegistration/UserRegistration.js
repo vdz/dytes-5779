@@ -1,12 +1,6 @@
 import React from 'react'
 import { addEntry } from '../../modules/contentful_managment.api'
-
-const DISPLAY_MODES = {
-    normal : 0,
-    processing : 1,
-    error : 2,
-    done : 3
-};
+import { DISPLAY_MODES } from '../../modules/ui_display_modes'
 
 export default class UserRegistration extends React.Component {
     constructor(props) {

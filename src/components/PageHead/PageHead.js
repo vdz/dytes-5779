@@ -1,32 +1,48 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import { TES_PARTS } from '../../modules/tes.helper';
-import UserRegistration from "../UserRegistration/UserRegistration";
 
 export default class PageHead extends Component {
   render() {
+      const { book, part } = this.props;
+
     return (
       <section className='PageHead'>
         <header className='header'>
             <h1 className='title'>{this.props.title}</h1>
-            <Link to='/'>כרך</Link>
+            <Link to={`/book/${book}`}>{`כרך ${TES_PARTS[book]}`}</Link>
             &nbsp;
-            <Link to='/'>חלק</Link>
+            <Link to={`/part/${part}`}>{`חלק ${TES_PARTS[part]}`}</Link>
             &nbsp;
-            <Link to='/'>נושאים</Link>
+            {this.getSubjects()}
         </header>
             
         <div className='back-panel'>
             <Link className='back-link arrow' to='/'>→</Link>
-            &nbsp;
-            <Link className='archive-link' to='/'>ארכיון שיעורים</Link>
         </div>
         <div className='next-panel'>
             <Link className='next-link arrow' to='/'>←</Link>
-            &nbsp;
-            <UserRegistration />
         </div>
       </section>
     )
+  }
+
+  getSubjects() {
+      if (!this.props.subject) return null;
+      const list = this.props.subject.split(',');
+      const results = [];
+
+      list.forEach(subject => {
+          results.push(
+              <Link key={`subject-${subject}`} to={`/subject/${subject}`} />
+          )
+      });
+
+      return (
+          <>
+            {results}
+          </>
+      );
+
   }
 }

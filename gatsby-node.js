@@ -20,7 +20,7 @@ exports.createPages = ({ graphql, actions }) => {
 					//_ create the main page
 					if (page.index === current_index) {
 						createPage({
-							path : '/pages/current',
+							path : '/',
 							component : page_template,
 							context : { page }
 						})
@@ -28,7 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
 
 					//_ create individual lesson pages with /pages/<page_num> route
 					createPage({
-						path: `/pages/${page.index}`,
+						path: `/page/${page.index}`,
 						component: page_template,
 						context: { page }
 					})

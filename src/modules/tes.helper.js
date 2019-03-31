@@ -1,4 +1,5 @@
 export const TES_PARTS = [
+    '',
     'א',
     'ב',
     'ג',

@@ -36,10 +36,11 @@ body {
 
   a {
       color: #39f;
+      font-size: 0.85rem;
       text-decoration: none;
       border-bottom: 1px solid $link-color;
       padding-bottom: 1px;
-      font-weight: $f-bold;
+      font-weight: $f-normal;
 
       &:hover {
           color: $link-color-hover;

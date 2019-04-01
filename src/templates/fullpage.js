@@ -57,9 +57,6 @@ class Fullpage extends Component {
 					<div className='related'>
 						<Related content={related} />
 						<UserRegistration />
-						<div>
-							נתרם ע״י ...
-						</div>
 					</div>
 				</section>
 				

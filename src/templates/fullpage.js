@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { getFlashes } from '../modules/contentful.api'
 
 import ScribdContainer from '../components/Scribd/ScribdContainer';
 import PageHead from '../components/PageHead/PageHead';
@@ -9,10 +10,18 @@ import UserRegistration from '../components/UserRegistration/UserRegistration';
 import Feedback from '../components/Feedback/Feedback';
 import Dedication from '../components/Dedication/Dedication';
 import Related from '../components/Related/Related';
+import Flash from '../components/Flash/Flash';
+import FlashList from '../components/Flash/FlashList';
 
 import '../styles/index.scss';
 
 class Fullpage extends Component {
+
+	constructor(props) {
+		super(props);
+		this.state = {
+		}
+	}
 
 	render() {
 		const { 
@@ -65,6 +74,7 @@ class Fullpage extends Component {
 					<div className='related'>
 						<Related content={related} />
 						<UserRegistration />
+						<FlashList index={index} />
 					</div>
 				</section>
 				

@@ -1,5 +1,7 @@
 .Page {
+    box-sizing: border-box;
     width: 100%;
+    padding: $master-gutter;
     display: grid;
     grid-template-rows: $page-header-height auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;

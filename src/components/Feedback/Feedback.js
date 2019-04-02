@@ -65,7 +65,7 @@ class Feedback extends React.Component {
                 </button>
                 <div className={`mode ${modes[this.state.mode]}`}
                      onClick={()=>{
-                         this.setState({ mode : DISPLAY_MODES.normal})
+                         this.setState({ mode : DISPLAY_MODES.active})
                      }}
                 >
                     {this.state.sys_message}

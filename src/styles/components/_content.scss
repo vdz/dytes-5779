@@ -1,4 +1,7 @@
 .Content {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: $master-gutter;
+    margin-bottom: $master-gutter;
 
     .title {
         font-weight: $f-light;

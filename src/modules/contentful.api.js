@@ -31,3 +31,15 @@ exports.getConfig = () => {
         return err
     })
 };
+
+exports.getFlashes = (page_index) => {
+    return client.getEntries({
+        content_type : 'flash',
+        order : '-fields.order,-fields.publish_date'
+    }).then(entries => {
+        return entries
+    }).catch(err => {
+        console.error('⭑', err);
+        return err
+    })
+}

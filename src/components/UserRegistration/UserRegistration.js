@@ -16,7 +16,8 @@ export default class UserRegistration extends React.Component {
 
     render() {
         return (
-            <div className={`Registration mode-${this.state.mode}`}>
+            <div className={`Registration Content mode-${this.state.mode}`}>
+                <h3 className='title'>הרשמה לרשימת הדיוור</h3>
                 {(this.state.mode !== DISPLAY_MODES.normal) && this.getMessage()}
                 <label>שם מלא (פרטי ומשפחה)</label>
                 <input type='text'

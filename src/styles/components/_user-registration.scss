@@ -10,13 +10,6 @@
     padding: $master-gutter 10% $master-gutter;
     align-items: center;
 
-    &:before {
-        @extend %quick-title;
-        content: 'הרשמה';
-        width: auto;
-        color: $color-accent-secondary;
-    }
-
     label {
         font-weight: $f-bold;
         grid-row: 2;

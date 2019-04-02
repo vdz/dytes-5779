@@ -18,10 +18,21 @@
     .back-panel {
         grid-area: back;
         position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .arrow {
+            align-self: flex-end;
+        }
     }
     .next-panel {
         grid-area: next;
         position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
     }
 
     .arrow {

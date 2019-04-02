@@ -30,6 +30,11 @@ class Fullpage extends Component {
 			related,
 			dedication
 		} = this.props.pageContext.page;
+		const {
+			current_index,
+			next_index,
+			prev_index
+		} = this.props.pageContext;
 
 		return (
 			<section className='DYTES'>
@@ -38,12 +43,15 @@ class Fullpage extends Component {
 				</header>
 				<section className='Page'>
 					<div className='toolbar'>
-						<PageHead index={index} 
-							title={title}
-							book={book} 
-							part={part} 
-							pages={pages}
-							subject={subject} />
+						<PageHead current_index={current_index}
+								  next_index={next_index}
+								  prev_index={prev_index}
+								  index={index}
+								  title={title}
+								  book={book}
+								  part={part}
+								  pages={pages}
+								  subject={subject} />
 					</div>
 					<div className='material'>
 						<Summary content={summary} />

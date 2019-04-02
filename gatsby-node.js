@@ -15,14 +15,19 @@ exports.createPages = ({ graphql, actions }) => {
 
 		return getPages().then(all_pages => {
 				//_ create a lesson index page
-				all_pages.items.forEach(item => {
+				all_pages.items.forEach((item, index) => {
 					const page = item.fields;
 					//_ create the main page
 					if (page.index === current_index) {
 						createPage({
 							path : '/',
 							component : page_template,
-							context : { page }
+							context : {
+								page,
+								current_index,
+								next_index : all_pages.items[index+1] ? all_pages.items[index+1].fields.index : null,
+								prev_index :  all_pages.items[index-1] ? all_pages.items[index-1].fields.index : null
+							}
 						})
 					}
 
@@ -30,7 +35,12 @@ exports.createPages = ({ graphql, actions }) => {
 					createPage({
 						path: `/page/${page.index}`,
 						component: page_template,
-						context: { page }
+						context: {
+							page,
+							current_index,
+							next_index : all_pages.items[index+1] ? all_pages.items[index+1].fields.index : null,
+							prev_index :  all_pages.items[index-1] ? all_pages.items[index-1].fields.index : null
+						}
 					})
 				});
 				return;

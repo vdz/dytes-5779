@@ -4,7 +4,7 @@ import { TES_PARTS } from '../../modules/tes.helper';
 
 export default class PageHead extends Component {
   render() {
-      const { book, part } = this.props;
+      const { book, part, index } = this.props;
 
     return (
       <section className='PageHead'>
@@ -18,10 +18,10 @@ export default class PageHead extends Component {
         </header>
             
         <div className='back-panel'>
-            <Link className='back-link arrow' to='/'>→</Link>
+            {this.getPrev()}
         </div>
         <div className='next-panel'>
-            <Link className='next-link arrow' to='/'>←</Link>
+            {this.getNext()}
         </div>
       </section>
     )
@@ -43,6 +43,23 @@ export default class PageHead extends Component {
             {results}
           </>
       );
+  }
 
+    getPrev() {
+        if (!this.props.prev_index) return null;
+        return (
+            <Link className='next-link arrow' to={`/page/${this.props.prev_index}`}>
+                →
+            </Link>
+        );
+    }
+
+  getNext() {
+      if (!this.props.next_index) return null;
+      return (
+          <Link className='next-link arrow' to={`/page/${this.props.next_index}`}>
+            ←
+          </Link>
+      );
   }
 }

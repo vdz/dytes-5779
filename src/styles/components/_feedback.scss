@@ -1,33 +1,11 @@
 .Feedback {
     position: relative;
     margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     grid-template: none;
     align-items: flex-start;
     border: none;
-
-    input, textarea, button {
-        box-sizing: border-box;
-        padding: $master-gutter/4;
-        width: 100%;
-        height: $master-gutter*1.5;
-        border: 1px solid #ccc;
-        margin-bottom: $master-gutter/2;
-    }
-
-    button {
-        outline: none;
-        border: none;
-        height: $master-gutter*2;
-        font-size: 16px;
-        font-family: $font-base-sans-serif;
-        border-radius: 4px;
-        color: #fff;
-        background-color: $link-color;
-        font-weight: $f-black;
-    }
 
     textarea {
         height: auto;

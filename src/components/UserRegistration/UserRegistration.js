@@ -28,7 +28,7 @@ export default class UserRegistration extends React.Component {
                        defaultValue=''
                        ref={this.email_ref} />
                 <div className='footer'>
-                    <button className='register'
+                    <button className='register outline'
                             onClick={() => {
                                 this.register()
                             }}>

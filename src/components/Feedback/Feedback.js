@@ -57,7 +57,7 @@ class Feedback extends React.Component {
                           }}
                           value = {this.state.content} />
                 <button type='button'
-                        className='submit'
+                        className='submit outline'
                         onClick={()=>{
                             this.submit()}
                         }>

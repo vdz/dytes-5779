@@ -1,14 +1,17 @@
 .Content {
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid $color-0;
+    padding-top: $master-gutter;
     padding-bottom: $master-gutter;
-    margin-bottom: $master-gutter;
+
+    /*&:hover {
+        box-shadow: inset 0 0 10px 3px $color-0;
+    }*/
 
     .title {
         font-weight: $f-black;
         font-size: 1.2rem;
         margin-bottom: $master-gutter/2;
-        color: #333;
-        background-color: #fff;
+        color: $color-title;
     }
 
     .content {

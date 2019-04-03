@@ -3,6 +3,7 @@
 @import './typography';
 @import './page';
 @import './poster-grid';
+@import './elements';
 @import './components/content';
 @import './components/page-head';
 @import './components/scribd';
@@ -14,6 +15,7 @@
 @import './components/feedback';
 @import './components/_dedication';
 @import './components/_flashes.scss';
+@import './components/related';
 
 html {
     direction: rtl;
@@ -33,40 +35,6 @@ body {
     -ms-font-feature-settings: "kern", "liga", "clig", "calt";
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
     font-feature-settings: "kern", "liga", "clig", "calt";
-  }
-
-  a {
-      color: $color-2nd;
-      font-size: 0.85rem;
-      text-decoration: none;
-      border-bottom: 1px solid $color-2nd;
-      padding-bottom: 1px;
-      font-weight: $f-normal;
-
-      &:hover {
-          color: $link-color-hover;
-          border-width: 0;
-      }
-  }
-
-  p {
-      margin-bottom: $master-gutter/2;
-  }
-
-button {
-    border-radius: 5px;
-    background-color: $color-2nd;
-    font-weight: $f-bold;
-    color: #fff;
-    border: none;
-    font-family: $font-base-sans-serif;
-    font-size: 1rem;
-    padding: 4px 20px;
-    outline: none;
-}
-
-  .hidden {
-      visibility: hidden;
   }
 
   .DYTES {

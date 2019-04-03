@@ -16,7 +16,6 @@
         }
         .material {
             grid-area: material;
-            padding-top: $master-gutter;
 
             .Content {
                 padding-left:  $master-gutter;
@@ -28,9 +27,8 @@
         }
         .related {
             grid-area: related;
-            padding-top: $master-gutter;
 
-            &>.Content {
+            .Content {
                 padding-right:  $master-gutter;
                 padding-left: $master-gutter*2;
             }

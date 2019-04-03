@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-export default class Summary extends Component {
+export default class    Summary extends Component {
     render() {
         return (
             <section className='Summary Content'>

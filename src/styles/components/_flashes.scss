@@ -1,0 +1,30 @@
+.FlashList {
+
+}
+
+.Flash {
+    position: relative;
+    margin-bottom: $master-gutter/3;
+    padding-bottom: $master-gutter/3 + 8px;
+
+    .subject {
+        font-weight: $f-bold;
+
+    }
+
+    .body {
+        font-size: 0.9rem;
+        line-height: 125%;
+    }
+
+    .date,
+    .author {
+        font-size: 0.8rem;
+        font-family: $font-base-sans-serif;
+        color:  #ccc;
+    }
+
+    .author  {
+        border-bottom: 8px solid $color-0;
+    }
+}

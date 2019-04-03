@@ -29,8 +29,11 @@ class FlashList extends Component {
     render() {
         const modes = Object.keys(DISPLAY_MODES);
         return (
-            <section className={`FlashList ${modes[this.state.mode]}`}>
-                {this.getFlashes()}
+            <section className={`FlashList Content ${modes[this.state.mode]}`}>
+                <h3 className='title'>מבזקים</h3>
+                <div className='content'>
+                    {this.getFlashes()}
+                </div>
             </section>
         );
     }

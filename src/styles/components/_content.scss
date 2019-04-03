@@ -4,10 +4,10 @@
     margin-bottom: $master-gutter;
 
     .title {
-        font-weight: $f-light;
-        font-size: 1.4rem;
+        font-weight: $f-black;
+        font-size: 1.2rem;
         margin-bottom: $master-gutter/2;
-        color: #666;
+        color: #333;
         background-color: #fff;
     }
 
@@ -15,16 +15,15 @@
         //border-right: 3px solid $color-accent-secondary;
         //padding-right: $master-gutter;
         //margin-right: $master-gutter;
-        margin-left: $master-gutter;
         font-family: $font-base-serif;
         font-size: 1rem;
         line-height: 130%;
         color: #555;
-        margin-bottom: $master-gutter;
     }
 
     ol {
         padding-right: $master-gutter;
         list-style-type: decimal;
+        list-style-position: outside;
     }
 }

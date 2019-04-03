@@ -4,17 +4,11 @@ import { TES_PARTS } from '../../modules/tes.helper';
 
 export default class PageHead extends Component {
   render() {
-      const { book, part, index } = this.props;
-
     return (
       <section className='PageHead'>
         <header className='header'>
             <h1 className='title'>{this.props.title}</h1>
-            <Link to={`/book/${book}`}>{`כרך ${TES_PARTS[book]}`}</Link>
-            &nbsp;
-            <Link to={`/part/${part}`}>{`חלק ${TES_PARTS[part]}`}</Link>
-            &nbsp;
-            {this.getSubjects()}
+            {this.getNavigation()}
         </header>
             
         <div className='back-panel'>
@@ -25,6 +19,22 @@ export default class PageHead extends Component {
         </div>
       </section>
     )
+  }
+
+  getNavigation() {
+      return null;
+
+      const { book, part } = this.props;
+
+      return (
+          <div className='nav'>
+              {<Link to={`/book/${book}`}>{`כרך ${TES_PARTS[book]}`}</Link>}
+              &nbsp;
+              {<Link to={`/part/${part}`}>{`חלק ${TES_PARTS[part]}`}</Link>}
+              &nbsp;
+              {this.getSubjects()}
+          </div>
+      )
   }
 
   getSubjects() {

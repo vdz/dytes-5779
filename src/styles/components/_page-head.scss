@@ -5,14 +5,20 @@
 
     .header {
         grid-area: title;
+        display: flex;
+        flex-direction: column;
         text-align: center;
+        align-items: center;
 
         .title {
-            font-weight: $f-black;
-            font-size: 1.4rem;
+            font-weight: $f-light;
+            font-size: 2rem;
             line-height: 140%;
-            color: #999;
-            margin-bottom: $master-gutter;
+            color: #333;
+            margin-bottom: $master-gutter/3;
+            padding: $master-gutter/2 $master-gutter;
+            background-color: $color-0;
+            width: auto;
         }
     }
     .back-panel {

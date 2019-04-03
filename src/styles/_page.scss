@@ -1,43 +1,46 @@
 .Page {
     box-sizing: border-box;
     width: 100%;
-    padding: $master-gutter;
+    padding: 0;
     display: grid;
     grid-template-rows: $page-header-height auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: $master-gutter;
+    grid-column-gap: 0; //$master-gutter;
     grid-template-areas:    "header header header header"
                             "material page page related"
                             "footer footer footer footer";
 
         .toolbar {
             grid-area: header;
+            border-bottom: 4px solid $color-0;
         }
         .material {
             grid-area: material;
+            padding-top: $master-gutter;
+
+            .Content {
+                padding-left:  $master-gutter;
+                padding-right: $master-gutter*2;
+            }
         }
         .pdf {
             grid-area: page;
         }
         .related {
             grid-area: related;
+            padding-top: $master-gutter;
+
+            &>.Content {
+                padding-right:  $master-gutter;
+                padding-left: $master-gutter*2;
+            }
         }
 
     .Registration {
-        margin: 0;
-        padding: 0;
         display: flex;
         flex-direction: column;
         grid-template: none;
         align-items: flex-start;
-        border: none;
-
-        &:before {
-            position: relative;
-            padding: 0;
-            top: auto;
-            background-color: transparent;
-        }
 
         &:before, label, input, button, .message {
             margin-bottom: $master-gutter/2;

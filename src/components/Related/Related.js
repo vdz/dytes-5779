@@ -6,7 +6,9 @@ class Related extends React.Component {
         return (
             <section className='Related Content'>
                 <h3 className='title'>חומרי עזר לימודיים</h3>
-                {documentToReactComponents(this.props.content)}
+                <div className='content'>
+                    {documentToReactComponents(this.props.content)}
+                </div>
             </section>
         );
     }

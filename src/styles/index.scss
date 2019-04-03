@@ -13,6 +13,7 @@
 @import './components/user-registration';
 @import './components/feedback';
 @import './components/_dedication';
+@import './components/_flashes.scss';
 
 html {
     direction: rtl;
@@ -35,10 +36,10 @@ body {
   }
 
   a {
-      color: #39f;
+      color: $color-2nd;
       font-size: 0.85rem;
       text-decoration: none;
-      border-bottom: 1px solid $link-color;
+      border-bottom: 1px solid $color-2nd;
       padding-bottom: 1px;
       font-weight: $f-normal;
 
@@ -51,6 +52,18 @@ body {
   p {
       margin-bottom: $master-gutter/2;
   }
+
+button {
+    border-radius: 5px;
+    background-color: $color-2nd;
+    font-weight: $f-bold;
+    color: #fff;
+    border: none;
+    font-family: $font-base-sans-serif;
+    font-size: 1rem;
+    padding: 4px 20px;
+    outline: none;
+}
 
   .hidden {
       visibility: hidden;
@@ -69,13 +82,5 @@ body {
           display: flex;
           justify-content: center;
           height: $site-header-height;
-          background-color: #f9f9f9;
-      }
-
-      .Poster {
-      }
-
-      .Page {
-
       }
   }

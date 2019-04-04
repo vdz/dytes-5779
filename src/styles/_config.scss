@@ -9,15 +9,19 @@ $master-gutter : 20px;
 $brand-dark-1       : #33495f;
 $brand-lite-1       : #f2f9ff;
 $link-color         : #39f;
-$link-color-hover   : #069;
+$link-color-hover   : #000;
 $color-accent-secondary : #966;
 $color-0            : #e3e3e3;
 $color-1st          : #39f;
-$color-2nd          : #E40C2B; //alt: #c60021;
+$color-2nd          : #c60021; //alt: #E40C2B;
 $color-3rd          : #F7F4E9;
 $color-title        : #333;
+
+$head-color         : #fff;
 
 // UI consts
 $site-header-height : auto;
 $page-header-height : 100px;
 $toolbar-height     : 40px;
+$footer-height      : 200px;
+$navigation-height  : 30px;

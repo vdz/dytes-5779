@@ -35,6 +35,7 @@ exports.getConfig = () => {
 exports.getFlashes = (page_index) => {
     return client.getEntries({
         content_type : 'flash',
+        'fields.page_index' : page_index,
         order : '-fields.order,-fields.publish_date'
     }).then(entries => {
         return entries

@@ -1,0 +1,21 @@
+.Navigation {
+    display: flex;
+    width: 100%;
+    height: $navigation-height;
+    justify-content: center;
+    align-items: center;
+
+    .links {
+        width: auto;
+        height: 1rem;
+        line-height: 1rem;
+
+        a {
+            display: inline-block;
+            margin: 0 $master-gutter/2;
+            color: #999;
+            border-color: #999;
+        }
+    }
+
+}

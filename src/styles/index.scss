@@ -6,6 +6,7 @@
 @import './elements';
 @import './components/content';
 @import './components/page-head';
+@import './components/navigation';
 @import './components/scribd';
 @import './components/summary';
 @import './components/questions';
@@ -50,5 +51,11 @@ body {
           display: flex;
           justify-content: center;
           height: $site-header-height;
+          background-color: $head-color;
+          /*background-image: url(/../../images/baal-hasulam.png);
+          background-position: top right;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-color: #575757;*/
       }
   }

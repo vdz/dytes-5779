@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { getFlashes } from '../modules/contentful.api'
 
+import Navigation from '../components/Navigation/Navigation';
 import ScribdContainer from '../components/Scribd/ScribdContainer';
 import PageHead from '../components/PageHead/PageHead';
 import Summary from '../components/Summary/Summary';
@@ -10,7 +10,6 @@ import UserRegistration from '../components/UserRegistration/UserRegistration';
 import Feedback from '../components/Feedback/Feedback';
 import Dedication from '../components/Dedication/Dedication';
 import Related from '../components/Related/Related';
-import Flash from '../components/Flash/Flash';
 import FlashList from '../components/Flash/FlashList';
 
 import '../styles/index.scss';
@@ -47,11 +46,10 @@ class Fullpage extends Component {
 
 		return (
 			<section className='DYTES'>
-				<header className='Header'>
-					<Dedication content={dedication}/>
-				</header>
 				<section className='Page'>
-					<div className='toolbar'>
+					<div className='page-toolbar'>
+						<Navigation />
+						<Dedication content={dedication}/>
 						<PageHead current_index={current_index}
 								  next_index={next_index}
 								  prev_index={prev_index}
@@ -62,19 +60,21 @@ class Fullpage extends Component {
 								  pages={pages}
 								  subject={subject} />
 					</div>
-					<div className='material'>
+					<div className='page-material'>
 						<Summary content={summary} />
 						<Video title={title} content={videoId_YouTube} />
 						<Questions content={questions} />
 						<Feedback page={index} />
 					</div>
-					<div className='pdf'>
+					<div className='page-pdf'>
 						<ScribdContainer title={title} url={pageSourceUrl_Scribd} />
 					</div>
-					<div className='related'>
+					<div className='page-related'>
 						<Related content={related} />
 						<UserRegistration />
 						<FlashList index={index} />
+					</div>
+					<div className='page-footer'>
 					</div>
 				</section>
 				

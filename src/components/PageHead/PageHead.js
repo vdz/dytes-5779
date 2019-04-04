@@ -48,11 +48,7 @@ export default class PageHead extends Component {
           )
       });
 
-      return (
-          <>
-            {results}
-          </>
-      );
+      return <>{results}</>;
   }
 
     getPrev() {
@@ -65,7 +61,7 @@ export default class PageHead extends Component {
     }
 
   getNext() {
-      if (!this.props.next_index) return null;
+      if (!this.props.next_index || this.props.next_index > this.props.current_index) return null;
       return (
           <Link className='next-link arrow' to={`/page/${this.props.next_index}`}>
             ←

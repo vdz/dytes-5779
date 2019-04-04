@@ -3,36 +3,44 @@
     width: 100%;
     padding: 0;
     display: grid;
-    grid-template-rows: $page-header-height auto;
+    grid-template-rows: $site-header-height auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 0; //$master-gutter;
     grid-template-areas:    "header header header header"
                             "material page page related"
                             "footer footer footer footer";
 
-        .toolbar {
-            grid-area: header;
-            border-bottom: 4px solid $color-0;
-        }
-        .material {
-            grid-area: material;
+    .page-toolbar {
+        grid-area: header;
+        justify-content: center;
+        height: $site-header-height;
+        background-color: $head-color;
+        border-bottom: 4px solid $color-0;
+    }
+    .page-material {
+        grid-area: material;
 
-            .Content {
-                padding-left:  $master-gutter;
-                padding-right: $master-gutter*2;
-            }
+        .Content {
+            padding-left:  $master-gutter;
+            padding-right: $master-gutter*2;
         }
-        .pdf {
-            grid-area: page;
-        }
-        .related {
-            grid-area: related;
+    }
+    .page-pdf {
+        grid-area: page;
+    }
+    .page-related {
+        grid-area: related;
 
-            .Content {
-                padding-right:  $master-gutter;
-                padding-left: $master-gutter*2;
-            }
+        .Content {
+            padding-right:  $master-gutter;
+            padding-left: $master-gutter*2;
         }
+    }
+    .page-footer {
+        grid-area: footer;
+        height: $footer-height;
+        background-color: $color-title;
+    }
 
     .Registration {
         display: flex;

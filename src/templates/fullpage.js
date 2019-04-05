@@ -13,6 +13,7 @@ import Related from '../components/Related/Related';
 import FlashList from '../components/Flash/FlashList';
 
 import '../styles/index.scss';
+import {Link} from "gatsby";
 
 class Fullpage extends Component {
 
@@ -46,6 +47,9 @@ class Fullpage extends Component {
 
 		return (
 			<section className='DYTES'>
+				<Link to='/' className='Logo'>
+					הדף היומי בתע״ס
+				</Link>
 				<section className='Page'>
 					<div className='page-toolbar'>
 						<Navigation />

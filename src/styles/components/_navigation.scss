@@ -3,16 +3,21 @@
     width: 100%;
     height: $navigation-height;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 
     .links {
+        position: absolute;
+        left: 130px;
+        flex-direction: column;
+        display: flex;
+        align-items: flex-end;
         width: auto;
         height: 1rem;
         line-height: 1rem;
 
         a {
             display: inline-block;
-            margin: 0 $master-gutter/2;
+            margin: 4px $master-gutter/2;
             color: #999;
             border-color: #999;
         }

@@ -1,6 +1,6 @@
 .PageHead {
     display: grid;
-
+    height: $page-header-height;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "back title title next";
 

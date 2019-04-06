@@ -5,6 +5,8 @@
 @import './poster-grid';
 @import './elements';
 @import './components/content';
+@import './components/header';
+@import './components/footer';
 @import './components/page-head';
 @import './components/navigation';
 @import './components/scribd';
@@ -47,47 +49,4 @@ body {
       bottom: 0;
       overflow: auto;
       border-top: 5px solid $color-2nd;
-
-      .Logo {
-          position: absolute;
-          left: 30px;
-          width: 100px;
-          height: 100px;
-          background-color: $color-2nd;
-          color: #fff;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          font-weight: $f-black;
-          font-size: 1.1rem;
-          box-shadow: 0 0 4px 1px rgba(0,0,0,0.3);
-          border: 0;
-
-          &:hover {
-              box-shadow: 0 0 4px 1px rgba(0,0,0,0.4);
-          }
-
-          &:after {
-              content: 'בית מדרש הסולם';
-              position: absolute;
-              font-size: 0.7rem;
-              font-weight: $f-light;
-              width: 100%;
-              text-align: center;
-              bottom: 3px;
-          }
-      }
-
-      .Header {
-          display: flex;
-          justify-content: center;
-          height: $site-header-height;
-          background-color: $head-color;
-          /*background-image: url(/../../images/baal-hasulam.png);
-          background-position: top right;
-          background-repeat: no-repeat;
-          background-size: contain;
-          background-color: #575757;*/
-      }
   }

@@ -1,4 +1,5 @@
 .Navigation {
+    position: absolute;
     display: flex;
     width: 100%;
     height: $navigation-height;
@@ -7,8 +8,8 @@
 
     .links {
         position: absolute;
-        left: 130px;
-        flex-direction: row;
+        left: $logo-width + $master-gutter*1.5;
+        flex-direction: column;
         display: flex;
         align-items: flex-end;
         align-self: center;

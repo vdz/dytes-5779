@@ -28,6 +28,7 @@ class Feedback extends React.Component {
         return (
             <section className={`Feedback Content ${modes[this.state.mode]}`}>
                 <h3 className='title'>שאל אותנו שאלה</h3>
+                <p>יש לכם שאלה? בקשה? משוב? נשמח לשמוע מכם ולסייע לכם ללמוד.</p>
                 <input type='text'
                        className='name'
                        onFocus={()=>{

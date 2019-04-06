@@ -6,7 +6,7 @@ class Navigation extends Component {
         return (
             <section className='Navigation'>
                 <div className='links'>
-                    <Link to='/about' className='about'>אודות</Link>
+                    <Link to='#footer' className='about'>אודות</Link>
                     <a href='https://www.hasulam.co.il' className='hasulam'>אתר הסולם</a>
                     {
                         //<Link to='/dedicate' className='dedicate'>הקדשות</Link>

@@ -47,9 +47,12 @@ class Fullpage extends Component {
 
 		return (
 			<section className='DYTES'>
-				<Link to='/' className='Logo'>
-					הדף היומי בתע״ס
-				</Link>
+				<section className='Header'>
+					<Link to='/' className='Logo'>
+						הדף היומי בתלמוד עשר הספירות
+					</Link>
+				</section>
+
 				<section className='Page'>
 					<div className='page-toolbar'>
 						<Navigation />
@@ -79,6 +82,28 @@ class Fullpage extends Component {
 						<FlashList index={index} />
 					</div>
 					<div className='page-footer'>
+						<section className='about-tes Content'>
+							<a name='footer' />
+							<h3 className='title'>איך לומדים את הדף היומי בתע״ס</h3>
+							<div className='content'>
+								<p>
+									מדי יום יתווסף כאן שיעור יומי בתלמוד עשר הספירות, כולל השיעור המוקלט של הרב אדם סיני. בנוסף נוסיף כאן לרווחת הלומדים חומרי עזר לימודיים, שאלות חזרה, סיכום השיעור ועוד.
+								</p>
+								<p>
+									נשמח לקבל שאלות מהלומדים כדי שמלמדים מבית מדרש הסולם יוכלו לענות עליהם בשיעור חזרה בשעות הערב (שעון ישראל). הקלטת שיעור החזרה תתפרסם כאן, כמו גם שאלות ותשובות נבחרות (ראה מבזקים).
+								</p>
+								<p>
+									 נשמח לקבל שאלות ומשובים בטופס יצירת קשר למעלה. כמו כן עקבו אחר הפרסומים שלנו בטוויטר
+									<a href='https://twitter.com/hasulam' title='hasulam'>hasulam</a>.
+								</p>
+							</div>
+						</section>
+						<section className='why-learn Content'>
+							<h3 className='title'>חשיבות לימוד תלמוד עשר הספירות</h3>
+						</section>
+						<section className='about-hasulam Content'>
+							<h3 className='title'>מי אנחנו</h3>
+						</section>
 					</div>
 				</section>
 				

@@ -121,7 +121,7 @@ class Fullpage extends Component {
 								</p>
 								<p>&mdash; הרב אדם סיני</p>
 								<p>
-									<a href='https://www.hasulam.co.il/hiyuv-limud/' title='בעניין חיוב לימוד פנימיות התורה'>עוד על חשיבו לימוד פנימיות התורה וחכמת הקבלה</a>
+									<a href='https://www.hasulam.co.il/hiyuv-limud/' title='בעניין חיוב לימוד פנימיות התורה'>עוד על חשיבות לימוד פנימיות התורה וחכמת הקבלה</a>
 								</p>
 							</div>
 						</section>

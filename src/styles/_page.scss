@@ -27,6 +27,9 @@
     }
     .page-pdf {
         grid-area: page;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .page-related {
         grid-area: related;

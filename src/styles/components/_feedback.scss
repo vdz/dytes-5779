@@ -1,6 +1,7 @@
 .Feedback {
     position: relative;
     margin: 0;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     grid-template: none;
@@ -42,5 +43,10 @@
     }
 }
 
+.page-pdf .Feedback {
+    margin-top: $master-gutter*2;
+    padding: $master-gutter*2;
+    box-shadow: 0 1px 6px 2px rgba(200,200,200,0.3);
+}
 
 

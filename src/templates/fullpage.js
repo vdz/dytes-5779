@@ -34,6 +34,7 @@ class Fullpage extends Component {
 			pages,
 			pageSourceUrl_Scribd,
 			videoId_YouTube,
+			summary_videoId_YouTube,
 			audioDownloadUrl,
 			questions,
 			related,
@@ -69,7 +70,10 @@ class Fullpage extends Component {
 					</div>
 					<div className='page-material'>
 						<Summary content={summary} />
-						<Video title={title} content={videoId_YouTube} />
+						<Video content={videoId_YouTube} />
+						{ summary_videoId_YouTube  ?
+								<Video title='סיכום מקוצר' content={summary_videoId_YouTube} />
+								: null}
 						<Questions content={questions} />
 						<Feedback page={index} />
 					</div>

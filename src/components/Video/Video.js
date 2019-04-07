@@ -8,12 +8,12 @@ export default class Video extends Component {
 
         return (
             <section className='Video Content'>
+                <h3 className='title'>{this.props.title}</h3>
                 <div className='content'>
                     <YouTube videoId={this.props.content}
                              className='video'
                              containerClassName='video-wrapper'
                              opts={{height : '', width : ''}} />
-                    <Link to={youtube_url}>הערוץ השיעורים שלנו ביוטוב</Link>
                 </div>
             </section>
         )

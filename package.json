@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.1.0",
+    "axios": "^0.18.0",
     "contentful": "^7.4.1",
     "contentful-management": "^5.7.0",
     "gatsby": "^2.1.27",

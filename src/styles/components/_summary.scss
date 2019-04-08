@@ -1,7 +1,48 @@
 .Summary {
+    position: relative;
     background-color: $color-3rd;
+    width: auto;
+
+    &.expanded {
+        position: relative;
+        z-index: 3;
+        width: 300%;
+        height: auto;
+
+        .content {
+            box-sizing: border-box;
+            max-height: none;
+            overflow: auto;
+            padding-left: $master-gutter*3;
+        }
+    }
 
     .content {
         font-size: 1.1rem;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    .toggle {
+        position: absolute;
+        align-self: center;
+        z-index: 2;
+        right: 8px;
+        top: $master-gutter;
+        color: #999;
+        cursor: pointer;
+        font-size: 0.7rem;
+        margin-bottom: 5px;
+        //border-bottom: 1px dashed #ccc;
+        border-radius: 4px;
+        padding: 10px 5px;
+        background-color: $color-3rd-dark;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+
+        &:hover {
+            color: #333;
+            border-color: #333;
+        }
     }
 }

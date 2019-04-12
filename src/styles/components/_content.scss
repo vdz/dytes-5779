@@ -33,4 +33,17 @@
         list-style-type: decimal;
         list-style-position: outside;
     }
+
+    .asset {
+        &.img {
+            padding: 5px;
+            border-radius: 2px;
+            box-sizing: border-box;
+            border: 1px solid $color-0;
+            box-shadow: 0 0 3px 1px rgba(200,200,200,0.5);
+            background-color: #fff;
+            display: inline-block;
+            max-width: 33%;
+        }
+    }
 }

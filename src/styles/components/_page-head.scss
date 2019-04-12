@@ -43,8 +43,13 @@
     }
 
     .arrow {
+        display: flex;
+        margin: auto $master-gutter/2;
         font-size: 2rem;
         border: none;
+        .label {
+            font-size: 0.8rem;
+        }
     }
 
     .Registration {

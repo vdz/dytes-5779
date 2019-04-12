@@ -44,8 +44,10 @@
 }
 
 .page-pdf .Feedback {
-    margin-top: $master-gutter*2;
+    background-color: $color-3rd;
+    margin: $master-gutter*2 auto;
     padding: $master-gutter*2;
+    border: 1px solid $color-3rd-dark;
     box-shadow: 0 1px 6px 2px rgba(200,200,200,0.3);
 }
 

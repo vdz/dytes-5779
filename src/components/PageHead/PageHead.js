@@ -55,7 +55,7 @@ export default class PageHead extends Component {
         if (!this.props.prev_index) return null;
         return (
             <Link className='next-link arrow' to={`/page/${this.props.prev_index}`}>
-                →
+                → <span className='label'>לדף קודם</span>
             </Link>
         );
     }
@@ -64,7 +64,8 @@ export default class PageHead extends Component {
       if (!this.props.next_index || this.props.next_index > this.props.current_index) return null;
       return (
           <Link className='next-link arrow' to={`/page/${this.props.next_index}`}>
-            ←
+              <span className='label'>לדף הבא</span>
+              ←
           </Link>
       );
   }

@@ -32,7 +32,7 @@
     "prettier": "^1.16.4"
   },
   "keywords": [
-    "תלמוד עשר הספירות"
+    "gatsby"
   ],
   "license": "MIT",
   "scripts": {

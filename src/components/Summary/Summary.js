@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import RichText from '../RichText';
 
-export default class    Summary extends Component {
+export default class Summary extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -17,7 +17,7 @@ export default class    Summary extends Component {
                 </span>
                 <h3 className='title'>סיכום השיעור</h3>
                 <div className='content'>
-                    {documentToReactComponents(this.props.content)}
+                    <RichText>{this.props.content}</RichText>
                 </div>
             </section>
         )

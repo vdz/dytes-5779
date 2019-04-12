@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import RichText from '../RichText';
 
 
 class Flash extends Component {
@@ -8,7 +8,9 @@ class Flash extends Component {
         return (
             <div className='Flash'>
                 <h3 className='subject'>{this.props.title}</h3>
-                <div className='body'>{documentToReactComponents(this.props.body, {})}</div>
+                <div className='body'>
+                    <RichText>{this.props.body}</RichText>
+                </div>
                 <span className='author'>{this.props.author}</span>
                 &nbsp;
                 <span className='date'>&mdash; {this.formatDate(dt)}</span>

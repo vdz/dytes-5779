@@ -1,5 +1,5 @@
 import React from 'react';
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import RichText from '../RichText';
 
 class Related extends React.Component {
     render() {
@@ -7,7 +7,7 @@ class Related extends React.Component {
             <section className='Related Content'>
                 <h3 className='title'>חומרי עזר לימודיים</h3>
                 <div className='content'>
-                    {documentToReactComponents(this.props.content)}
+                    <RichText>{this.props.content}</RichText>
                 </div>
             </section>
         );

@@ -18,6 +18,10 @@ class RichText extends Component {
                 },
                 [INLINES.HYPERLINK]: (node, children) => {
                     return <a href={node.data.uri}>{children}</a>;
+                },
+                [INLINES.ASSET_HYPERLINK]: (node, children) => {
+                    return <a href={node.data.target.fields.file.url}
+                              title={node.data.target.fields.file.title}>{children}</a>;
                 }
             }
         })

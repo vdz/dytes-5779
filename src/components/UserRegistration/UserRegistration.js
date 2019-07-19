@@ -79,7 +79,7 @@ export default class UserRegistration extends React.Component {
         }).then((res) => {
             this.setState({
                 mode : DISPLAY_MODES.done,
-                message : 'תודה. שמרתנו ...'
+                message : 'תודה. שמרנו ...'
             });
 
             this.name_ref.current.value = '';

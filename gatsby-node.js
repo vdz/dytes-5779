@@ -4,12 +4,15 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
-const path = require('path')
+const path = require('path');
 const { getPages, getConfig } = require('./src/modules/contentful.api');
 
 exports.createPages = ({ graphql, actions }) => {
 	const { createPage } = actions;
-	const page_template = path.resolve('src/templates/fullpage.js');
+	
+	const page_component = path.resolve('src/pages/fullpage');
+	const index_component = path.resolve('src/pages/index');
+
 	return getConfig().then(config => {
 		const current_index = config.items[0].fields.currentPageIndex;
 
@@ -21,7 +24,7 @@ exports.createPages = ({ graphql, actions }) => {
 					if (page.index === current_index) {
 						createPage({
 							path : '/',
-							component : page_template,
+							component : page_component,
 							context : {
 								page,
 								current_index,
@@ -34,7 +37,7 @@ exports.createPages = ({ graphql, actions }) => {
 					//_ create individual lesson pages with /pages/<page_num> route
 					createPage({
 						path: `/page/${page.index}`,
-						component: page_template,
+						component: page_component,
 						context: {
 							page,
 							current_index,
@@ -43,6 +46,18 @@ exports.createPages = ({ graphql, actions }) => {
 						}
 					})
 				});
+
+				const { pages_by_parts, titles } = processIndexData(all_pages);
+
+				//_ create the intex page
+				createPage({
+					path: '/index/',
+					component : index_component,
+					context : {
+						pages_by_parts,
+						titles
+					}
+				})
 				return;
 			})
 		})

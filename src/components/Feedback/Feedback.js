@@ -39,9 +39,9 @@ class Feedback extends React.Component {
                        onChange={(e)=>{
                            this.setState({ name : e.target.value })
                        }} />
-                <input type='text'
+                <input type='email'
                        className='contact'
-                       placeholder='דואל או טלפון ליצירת קשר'
+                       placeholder='דואר אלקטרוני'
                        value={this.state.contact}
                        onChange={(e)=>{
                            this.setState({ contact : e.target.value })
@@ -129,7 +129,7 @@ class Feedback extends React.Component {
             this.reset();
             this.setState({
                 mode : DISPLAY_MODES.done,
-                sys_message : 'תודה. שמרתנו ...'
+                sys_message : 'תודה. שמרנו ... נשוב אליך בהקדם'
             });
             setTimeout(() => {
                 this.setState({

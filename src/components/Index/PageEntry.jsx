@@ -6,7 +6,7 @@ export const PageEntry = (props) => {
     return (
         <p className={`PageEntry`}>
             <a href={`/page/${index}`} className={`page-link`}>
-                ד. ${index} &mdash; ${title}
+                דף {index} &mdash; {title}
             </a>
         </p>
     )

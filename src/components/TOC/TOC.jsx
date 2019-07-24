@@ -3,12 +3,11 @@ import { TES_PARTS } from "../../modules/tes.helper";
 
 export const TOC = (props) => {
 
-    const titles = Object.keys(props.titles).forEach(part => {
+    const titles = Object.keys(props.toc).map((part, index) => {
         return (
             <li key={`toc-${part}`}>
                 <a href={`#part-${part}-list`}>
                     {`חלק ${TES_PARTS[part]}`} 
-                    <span>{props.titles[part]}</span>
                 </a>
             </li>
         )

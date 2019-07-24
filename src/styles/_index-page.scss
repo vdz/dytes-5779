@@ -1,4 +1,23 @@
 .Index {
+    a {
+        line-height: 150%;
+        border-color: $color-0;
+        padding-bottom: $master-gutter/2;
+        padding-top: $master-gutter/2;
+        margin-bottom: 0;
+        display: block;
+
+        &:hover {
+            background-color: #fff;
+        }
+        &:not([href]) {
+            visibility: hidden;
+            display: inline;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
     .Header {
         max-width: 500px;
         margin: auto;
@@ -24,17 +43,47 @@
     .TOC {
         text-align: right;
         max-width: 500px;
-        margin: auto;
+        margin: auto auto $master-gutter;
+    }
+
+    .toc-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .TOCCard {
+        box-sizing: border-box;
+        position: relative;
+        width: 50%;
+        min-width: 370px;
+        padding: $master-gutter $master-gutter*2;
+        background-color: #f5f5f5;
+        
+        &:after {
+            content:'';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -1px;
+            width: 1px;
+            background-color: $color-0;
+            z-index: 1;
+        }
+
+        .back-to-top {
+            color: #999;
+        }
     }
 
     .IndexTitle {
         font-size: 500%;
         font-weight: 700;
-        line-height: 200%;
+        line-height: 140%;
         height: auto;
-        padding: 0 $master-gutter*2;
     }
     .PageEntry {
-        padding: 0 $master-gutter*2;
+        margin:0;
+        padding: 0;
     }
 }

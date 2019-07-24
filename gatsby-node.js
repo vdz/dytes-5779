@@ -11,7 +11,7 @@ exports.createPages = ({ graphql, actions }) => {
 	const { createPage } = actions;
 	
 	const page_component = path.resolve('src/pages/fullpage.js');
-	const index_component = path.resolve('src/pages/index.js');
+	const index_component = path.resolve('src/pages/index-page.js');
 
 	return getConfig().then(config => {
 		const current_index = config.items[0].fields.currentPageIndex;

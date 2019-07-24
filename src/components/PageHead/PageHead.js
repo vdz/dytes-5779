@@ -8,6 +8,10 @@ export default class PageHead extends Component {
       <section className='PageHead'>
         <header className='header'>
             <h1 className='title'>{this.props.title}</h1>
+            <Link to='/index/'>
+                <span className='label'>רשימת השיעורים</span>
+            </Link>
+            <br />
             {this.getNavigation()}
         </header>
             

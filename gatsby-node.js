@@ -10,6 +10,7 @@ const { getPages, getConfig } = require('./src/modules/contentful.api');
 exports.createPages = ({ graphql, actions }) => {
 	const { createPage } = actions;
 	const page_template = path.resolve('src/templates/fullpage.js');
+	
 	return getConfig().then(config => {
 		const current_index = config.items[0].fields.currentPageIndex;
 

@@ -25,6 +25,9 @@ class Fullpage extends Component {
 	}
 
 	render() {
+
+		if (!this.props.pageContext.page) return null;
+
 		const { 
 			index, 
 			title, 
@@ -41,6 +44,7 @@ class Fullpage extends Component {
 			related,
 			dedication
 		} = this.props.pageContext.page;
+
 		const {
 			current_index,
 			next_index,

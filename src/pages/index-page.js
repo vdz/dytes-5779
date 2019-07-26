@@ -9,6 +9,8 @@ const IndexPage = (props) => {
     const { pages_by_parts, titles } = props.pageContext;
     let result = [];
 
+    if(!pages_by_parts) return null;
+
     Object.keys(pages_by_parts).forEach((key) => {
         result.push(<TOCCard key={`card-${key}`} part={key} pages={pages_by_parts[key]} />);
     });

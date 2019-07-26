@@ -20,6 +20,7 @@ exports.createPages = ({ graphql, actions }) => {
 				//_ create a lesson index page
 				all_pages.items.forEach((item, index) => {
 					const page = item.fields;
+
 					//_ create the main page
 					if (page.index === current_index) {
 						createPage({

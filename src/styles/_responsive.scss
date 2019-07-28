@@ -5,7 +5,9 @@
 
             &:after {
                 bottom: -20px;
-                left: auto;
+                left: 50%;
+                margin-left: -4em;
+                width: auto;
                 color: #000;
             }
         }

@@ -29,6 +29,12 @@
                                 "material page"
                                 "related related"
                                 "footer footer";
+
+        .page-material {
+            .Content {
+                padding-right: $master-gutter;
+            }
+        }
     }
 }
 

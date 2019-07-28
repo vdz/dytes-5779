@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 
 import "../styles/index.scss";
 
-const IndexPage = (props) => {
+const TOCPage = (props) => {
     const { pages_by_parts, titles } = props.pageContext;
     let result = [];
 
@@ -16,7 +16,7 @@ const IndexPage = (props) => {
     });
 
     return (
-        <section className='DYTES Index'>
+        <section className='DYTES TOCPage'>
             <header className='Header'>
                 <a name='toc' />
                 <Link to='/' className='Logo'>
@@ -36,4 +36,4 @@ const IndexPage = (props) => {
     )
 }
 
-export default IndexPage;
+export default TOCPage;

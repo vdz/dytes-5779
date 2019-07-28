@@ -10,8 +10,8 @@ const { getPages, getConfig } = require('./src/modules/contentful.api');
 exports.createPages = ({ graphql, actions }) => {
 	const { createPage } = actions;
 	
-	const page_component = path.resolve('src/pages/fullpage.js');
-	const index_component = path.resolve('src/pages/index-page.js');
+	const page_component = path.resolve('src/templates/fullpage.js');
+	const toc_component = path.resolve('src/templates/toc.js');
 
 	return getConfig().then(config => {
 		const current_index = config.items[0].fields.currentPageIndex;
@@ -50,14 +50,15 @@ exports.createPages = ({ graphql, actions }) => {
 
 				//_ create the intex page
 				const { pages_by_parts, titles } = processIndexData(all_pages);
+				console.log(pages_by_parts);
 				createPage({
-					path: '/index/',
-					component : index_component,
+					path: '/toc/',
+					component : toc_component,
 					context : {
 						pages_by_parts,
 						titles
 					}
-				})
+				});
 				return;
 			})
 		})

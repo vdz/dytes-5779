@@ -2,7 +2,7 @@
 @import './config';
 @import './typography';
 @import './page';
-@import './index-page';
+@import './toc-page';
 @import './poster-grid';
 @import './elements';
 @import './components/content';
@@ -20,6 +20,7 @@
 @import './components/_dedication';
 @import './components/_flashes.scss';
 @import './components/related';
+@import './responsive';
 
 html {
     direction: rtl;

@@ -10,18 +10,19 @@
         flex-direction: column;
         text-align: center;
         align-items: center;
-
-        .title {
-            font-weight: $f-light;
-            font-size: 2rem;
-            line-height: 140%;
-            color: #333;
-            margin-bottom: $master-gutter/3;
-            padding: $master-gutter/2 $master-gutter;
-            background-color: $color-0;
-            width: auto;
-        }
     }
+
+    .title {
+        font-weight: $f-light;
+        font-size: 2rem;
+        line-height: 140%;
+        color: #333;
+        margin-bottom: $master-gutter/3;
+        padding: $master-gutter/2 $master-gutter;
+        background-color: $color-0;
+        width: auto;
+    }
+    
     .back-panel {
         grid-area: back;
         position: relative;

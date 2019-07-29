@@ -22,6 +22,11 @@
 @import './components/related';
 @import './responsive';
 
+* {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
 html {
     direction: rtl;
 }

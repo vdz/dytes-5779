@@ -15,7 +15,7 @@ const client = contentful.createClient({
 export async function getAllPages() {
   try {
     const entries = await client.getEntries({
-      content_type: 'lessonPage',
+      content_type: 'page',
       order: 'fields.index',
     });
     return entries.items.map(item => ({

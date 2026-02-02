@@ -13,7 +13,7 @@ const parts = Object.keys(toc);
   {parts.map((part) => (
     <li>
       <a href={`#part-${part}-list`}>
-        {`חלק ${TES_PARTS[Number(part)]}`}
+        {`חלק ${TES_PARTS[Number(part)]} (${Number(part)})`}
       </a>
     </li>
   ))}

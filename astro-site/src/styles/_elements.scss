@@ -1,3 +1,7 @@
+@use "sass:math";
+@use "config" as *;
+@use "typography" as *;
+
 a {
     color: $color-2nd;
     font-size: 0.85rem;
@@ -13,20 +17,23 @@ a {
 }
 
 p {
-    margin-bottom: $master-gutter/2;
+    margin-bottom: math.div($master-gutter, 2);
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
     outline: none;
     box-sizing: border-box;
-    padding: $master-gutter/4;
+    padding: math.div($master-gutter, 4);
     width: 100%;
     height: $master-gutter*1.5;
     border: 1px solid $color-0;
-    margin-bottom: $master-gutter/2;
+    margin-bottom: math.div($master-gutter, 2);
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
     background-color: #fff;
     border-right-color: $color-2nd;
 }

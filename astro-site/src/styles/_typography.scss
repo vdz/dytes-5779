@@ -1,10 +1,10 @@
-@import './typography/font-almoni-dl';
-@import './typography/font-narkistam';
+@use './typography/font-almoni-dl';
+@use './typography/font-narkistam';
 @import url(https://fonts.googleapis.com/css?family=David+Libre:400,500,700&subset=hebrew);
 
 // Font weights
-$f-light        : 300;
-$f-normal       : 400;
-$f-medium       : 500;
-$f-bold         : 700;
-$f-black        : 900;
+$f-light : 300;
+$f-normal : 400;
+$f-medium : 500;
+$f-bold : 700;
+$f-black : 900;

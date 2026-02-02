@@ -1,0 +1,29 @@
+---
+interface Props {
+  content?: string;
+  title?: string;
+}
+
+const { content, title } = Astro.props;
+
+// Only render if we have a video ID
+if (!content) {
+  return null;
+}
+---
+
+<section class="Video Content">
+  {title && <h3 class="title">{title}</h3>}
+  <div class="content">
+    <div class="video-wrapper">
+      <iframe
+        class="video"
+        src={`https://www.youtube.com/embed/${content}`}
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</section>

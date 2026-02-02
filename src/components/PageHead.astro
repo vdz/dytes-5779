@@ -1,0 +1,44 @@
+---
+interface Props {
+  title: string;
+  currentIndex: number;
+  nextIndex: number | null;
+  prevIndex: number | null;
+  index: number;
+  book?: number;
+  part?: number;
+  pages?: string;
+  subject?: string;
+}
+
+const { title, currentIndex, nextIndex, prevIndex, index, book, part, pages, subject } = Astro.props;
+
+// Show next link only if next page exists and is not beyond current
+const showNext = nextIndex !== null && nextIndex <= currentIndex;
+const showPrev = prevIndex !== null;
+---
+
+<section class="PageHead">
+  <header class="header">
+    <h1 class="title">{title}</h1>
+    <a href="/toc/">
+      <span class="label">רשימת השיעורים</span>
+    </a>
+    <br />
+  </header>
+  
+  <div class="back-panel">
+    {showPrev && (
+      <a class="next-link arrow" href={`/page/${prevIndex}`}>
+        → <span class="label">לדף קודם</span>
+      </a>
+    )}
+  </div>
+  <div class="next-panel">
+    {showNext && (
+      <a class="next-link arrow" href={`/page/${nextIndex}`}>
+        <span class="label">לדף הבא</span> ←
+      </a>
+    )}
+  </div>
+</section>

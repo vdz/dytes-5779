@@ -1,51 +1,26 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "dependencies": {
-    "@contentful/rich-text-react-renderer": "^13.1.0",
-    "axios": "^0.18.0",
-    "contentful": "^7.4.1",
-    "contentful-management": "^5.7.0",
-    "gatsby": "^2.1.27",
-    "gatsby-cli": "^2.7.20",
-    "gatsby-image": "^2.0.31",
-    "gatsby-plugin-gtag": "^1.0.10",
-    "gatsby-plugin-manifest": "^2.0.22",
-    "gatsby-plugin-offline": "^2.0.24",
-    "gatsby-plugin-react-helmet": "^3.0.8",
-    "gatsby-plugin-sass": "^2.0.11",
-    "gatsby-plugin-sharp": "^2.0.25",
-    "gatsby-source-contentful": "^2.0.35",
-    "gatsby-source-filesystem": "^2.0.23",
-    "gatsby-transformer-sharp": "^2.1.15",
-    "node-sass": "^4.11.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-helmet": "^5.2.0",
-    "react-youtube": "^7.9.0",
-    "reset-css": "^4.0.1"
-  },
-  "devDependencies": {
-    "prettier": "^1.16.4"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vdz/dytes-5779"
-  }
+    "name": "dytes-astro",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/react": "^3.6.0",
+        "@contentful/rich-text-react-renderer": "^15.22.9",
+        "@contentful/rich-text-types": "^16.8.5",
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
+        "astro": "^4.15.0",
+        "contentful": "^10.15.0",
+        "contentful-management": "^11.35.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "reset-css": "^5.0.2",
+        "sass": "^1.77.0"
+    }
 }

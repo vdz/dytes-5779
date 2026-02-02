@@ -1,3 +1,5 @@
+@use "../config" as *;
+
 .Scribd {
     position: relative;
     background-color: transparent;
@@ -18,7 +20,7 @@
         margin-bottom: 5px;
         //border-bottom: 1px dashed #ccc;
         border-radius: 4px;
-        padding: 5px  10px;
+        padding: 5px 10px;
         background-color: $color-0;
 
         &:hover {
@@ -33,7 +35,7 @@
         border: 0;
     }
 
-    &.fullscreen  {
+    &.fullscreen {
         position: fixed;
         flex-direction: row;
         top: 0;
@@ -41,7 +43,7 @@
         right: 0;
         bottom: 0;
         z-index: 2;
-        background-color: rgba(0,0,0,0.8);
+        background-color: rgba(0, 0, 0, 0.8);
 
         iframe {
             position: absolute;

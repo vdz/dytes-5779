@@ -1,0 +1,20 @@
+---
+import { TES_PARTS } from '../lib/tes-helper';
+
+interface Props {
+  toc: Record<number, string>;
+}
+
+const { toc } = Astro.props;
+const parts = Object.keys(toc);
+---
+
+<ol class="TOC">
+  {parts.map((part) => (
+    <li>
+      <a href={`#part-${part}-list`}>
+        {`חלק ${TES_PARTS[Number(part)]} (${Number(part)})`}
+      </a>
+    </li>
+  ))}
+</ol>

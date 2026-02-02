@@ -1,0 +1,35 @@
+---
+import '../styles/index.scss';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = 'הדף היומי בתלמוד עשר הספירות',
+  description = 'שיעורי הדף היומי בתלמוד עשר הספירות מפי הרב אדם סיני - בית מדרש הסולם'
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href="/hasulam-icon.png" />
+    <title>{title}</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40219407-2"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-40219407-2');
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

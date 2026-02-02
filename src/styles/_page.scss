@@ -1,3 +1,7 @@
+@use "sass:math";
+@use "config" as *;
+@use "typography" as *;
+
 .Page {
     box-sizing: border-box;
     width: 100%;
@@ -6,9 +10,9 @@
     grid-template-rows: $site-header-height auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 0; //$master-gutter;
-    grid-template-areas:    "header header header header"
-                            "material page page related"
-                            "footer footer footer footer";
+    grid-template-areas: "header header header header"
+        "material page page related"
+        "footer footer footer footer";
 
     .page-toolbar {
         grid-area: header;
@@ -17,28 +21,32 @@
         background-color: $head-color;
         border-bottom: 4px solid $color-0;
     }
+
     .page-material {
         grid-area: material;
 
         .Content {
-            padding-left:  $master-gutter;
+            padding-left: $master-gutter;
             padding-right: $master-gutter*2;
         }
     }
+
     .page-pdf {
         grid-area: page;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .page-related {
         grid-area: related;
 
         .Content {
-            padding-right:  $master-gutter;
+            padding-right: $master-gutter;
             padding-left: $master-gutter*2;
         }
     }
+
     .page-footer {
         grid-area: footer;
     }
@@ -49,8 +57,12 @@
         grid-template: none;
         align-items: flex-start;
 
-        &:before, label, input, button, .message {
-            margin-bottom: $master-gutter/2;
+        &:before,
+        label,
+        input,
+        button,
+        .message {
+            margin-bottom: math.div($master-gutter, 2);
         }
     }
 

@@ -1,11 +1,15 @@
+@use "sass:math";
+@use "../config" as *;
+@use "../typography" as *;
+
 .FlashList {
     background-color: transparent;
 }
 
 .Flash {
     position: relative;
-    margin-bottom: $master-gutter/3;
-    padding-bottom: $master-gutter/3 + 8px;
+    margin-bottom: math.div($master-gutter, 3);
+    padding-bottom: math.div($master-gutter, 3) + 8px;
 
     .subject {
         font-weight: $f-bold;
@@ -23,10 +27,10 @@
     .author {
         font-size: 0.8rem;
         font-family: $font-base-sans-serif;
-        color:  #ccc;
+        color: #ccc;
     }
 
-    .author  {
+    .author {
         border-bottom: 8px solid $color-0;
     }
 

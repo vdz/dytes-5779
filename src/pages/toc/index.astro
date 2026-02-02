@@ -1,0 +1,34 @@
+---
+/**
+ * Table of Contents page - lists all lessons grouped by TES part
+ */
+import Layout from '../../layouts/Layout.astro';
+import TOC from '../../components/TOC.astro';
+import TOCCard from '../../components/TOCCard.astro';
+import { getPages, processIndexData } from '../../lib/contentful';
+
+// Fetch all pages at build time
+const pagesResponse = await getPages();
+const { pages_by_parts, titles } = processIndexData(pagesResponse);
+const parts = Object.keys(pages_by_parts).map(Number);
+---
+
+<Layout title="תוכן עניינים - הדף היומי בתלמוד עשר הספירות">
+  <section class="DYTES TOCPage">
+    <header class="Header">
+      <a id="toc"></a>
+      <a href="/" class="Logo">הדף היומי בתלמוד עשר הספירות</a>
+      <h1>תוכן עניינים</h1>
+      <h3>שיעורי הדף היומי בתע״ס</h3>
+      <p class="intro">
+        לפניכם רשימת שיעורים מסודרת לפי חלק תלמוד עשר הספירות, כפי שחילקם בע״ל הסולם זי״ע. הרשימה מתעדכנת עם עליית שיעורים חדשים כל יום.
+      </p>
+    </header>
+    <TOC toc={titles} />
+    <div class="toc-content">
+      {parts.map((part) => (
+        <TOCCard part={part} pages={pages_by_parts[part]} />
+      ))}
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,18 @@
+---
+import Title from './Title.astro';
+import PageEntry from './PageEntry.astro';
+import type { PageFields } from '../lib/contentful';
+
+interface Props {
+  part: number;
+  pages: PageFields[];
+}
+
+const { part, pages } = Astro.props;
+---
+
+<section class="TOCCard">
+  <Title part={part} />
+  {pages.map((page) => <PageEntry page={page} />)}
+  <a class="back-to-top" href="#toc">👆 לתוכן העניינים</a>
+</section>

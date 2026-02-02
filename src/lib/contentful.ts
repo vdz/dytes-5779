@@ -7,9 +7,19 @@ import * as contentfulModule from 'contentful';
 // Handle CommonJS default export in ESM context
 const contentful = (contentfulModule as any).default || contentfulModule;
 
+const space = import.meta.env.CONTENTFUL_SPACE;
+const accessToken = import.meta.env.CONTENTFUL_DELIVERY_TOKEN;
+
+if (!space || !accessToken) {
+    throw new Error(
+        'Contentful space ID and entry delivery token must be provided. ' +
+        'Check your .env file or environment variables.'
+    );
+}
+
 const client = contentful.createClient({
-    space: import.meta.env.CONTENTFUL_SPACE,
-    accessToken: import.meta.env.CONTENTFUL_DELIVERY_TOKEN,
+    space,
+    accessToken,
 });
 
 // Type definitions for Contentful content

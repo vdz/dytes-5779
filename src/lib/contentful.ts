@@ -9,7 +9,7 @@ const contentful = (contentfulModule as any).default || contentfulModule;
 
 const client = contentful.createClient({
     space: import.meta.env.CONTENTFUL_SPACE_ID,
-    accessToken: import.meta.env.CONTENTFUL_ACCESS_TOKEN,
+    accessToken: import.meta.env.CONTENTFUL_DELIVERY_TOKEN,
 });
 
 // Type definitions for Contentful content

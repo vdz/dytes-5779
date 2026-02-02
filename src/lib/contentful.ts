@@ -8,7 +8,7 @@ import * as contentfulModule from 'contentful';
 const contentful = (contentfulModule as any).default || contentfulModule;
 
 const client = contentful.createClient({
-    space: import.meta.env.CONTENTFUL_SPACE_ID,
+    space: import.meta.env.CONTENTFUL_SPACE,
     accessToken: import.meta.env.CONTENTFUL_DELIVERY_TOKEN,
 });
 

@@ -1,0 +1,58 @@
+@import 'reset-css/sass/reset';
+@import './config';
+@import './typography';
+@import './page';
+@import './toc-page';
+@import './poster-grid';
+@import './elements';
+@import './components/content';
+@import './components/header';
+@import './components/footer';
+@import './components/page-head';
+@import './components/navigation';
+@import './components/scribd';
+@import './components/summary';
+@import './components/questions';
+@import './components/video';
+@import './components/front-page';
+@import './components/user-registration';
+@import './components/feedback';
+@import './components/_dedication';
+@import './components/_flashes.scss';
+@import './components/related';
+@import './responsive';
+
+* {
+    -webkit-overflow-scrolling: touch;
+}
+
+html {
+    direction: rtl;
+}
+
+body {
+    height: auto;
+
+    color: $brand-dark-1;
+    font-size: 14px;
+    line-height: 130%;
+    font-family: $font-base-sans-serif;
+    font-weight: $f-normal;
+    word-wrap: break-word;
+    font-kerning: normal;
+    -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+    -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+    -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+    font-feature-settings: "kern", "liga", "clig", "calt";
+  }
+
+  .DYTES {
+      display: grid;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      overflow: auto;
+      border-top: 5px solid $color-2nd;
+  }

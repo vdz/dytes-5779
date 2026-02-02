@@ -1,0 +1,39 @@
+%quick-title {
+    content: '';
+    width: $master-gutter*3;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: $font-base-sans-serif;
+    font-weight: $f-black;
+    position: absolute;
+    top: -1rem;
+    right: 0;
+    background-color: #fff;
+    display: inline-block;
+    padding: 6px;
+}
+
+.Poster {
+    display: grid;
+    grid-template-rows: 80px auto 80px;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:    "top top top"
+                            "left center right"
+                            "bottom bottom bottom";
+    justify-content: stretch;
+    align-content: stretch;
+
+    background-color: #f5f5f5;
+
+    .postcard {
+        grid-area: center;
+        border: 1px solid $brand-lite-1;
+        box-shadow: 0 0 7px 1px rgba(230,230,230, 0.8);
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .footer {
+        grid-area: bottom;
+    }
+}

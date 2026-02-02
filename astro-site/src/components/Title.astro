@@ -1,0 +1,13 @@
+---
+import { TES_PARTS } from '../lib/tes-helper';
+
+interface Props {
+  part: number;
+}
+
+const { part } = Astro.props;
+---
+
+<h2 class="part-title" id={`part-${part}-list`}>
+  {`חלק ${TES_PARTS[part]}`}
+</h2>

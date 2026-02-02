@@ -1,0 +1,132 @@
+---
+/**
+ * Individual lesson page template
+ * Generates static pages for each lesson from Contentful
+ */
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import PageHead from '../../components/PageHead.astro';
+import Video from '../../components/Video.astro';
+import Footer from '../../components/Footer.astro';
+import Summary from '../../components/Summary';
+import Questions from '../../components/Questions';
+import ScribdContainer from '../../components/ScribdContainer';
+import Dedication from '../../components/Dedication';
+import Related from '../../components/Related';
+import FlashList from '../../components/FlashList';
+import Feedback from '../../components/Feedback';
+import UserRegistration from '../../components/UserRegistration';
+import { getPages, getConfig } from '../../lib/contentful';
+
+export async function getStaticPaths() {
+  const [pagesResponse, configResponse] = await Promise.all([
+    getPages(),
+    getConfig(),
+  ]);
+
+  const currentIndex = configResponse.items[0]?.fields.currentPageIndex ?? 1;
+  const pages = pagesResponse.items;
+
+  return pages.map((item, index) => {
+    const page = item.fields;
+    const prevIndex = pages[index - 1]?.fields.index ?? null;
+    const nextIndex = pages[index + 1]?.fields.index ?? null;
+
+    return {
+      params: { id: String(page.index) },
+      props: {
+        page,
+        currentIndex,
+        prevIndex,
+        nextIndex,
+      },
+    };
+  });
+}
+
+interface Props {
+  page: {
+    index: number;
+    title: string;
+    book?: number;
+    part?: number;
+    summary?: any;
+    subject?: string;
+    pages?: string;
+    pageSourceUrl_Scribd?: string;
+    videoId_YouTube?: string;
+    summary_videoId_YouTube?: string;
+    audioDownloadUrl?: string;
+    questions?: any;
+    related?: any;
+    dedication?: any;
+  };
+  currentIndex: number;
+  prevIndex: number | null;
+  nextIndex: number | null;
+}
+
+const { page, currentIndex, prevIndex, nextIndex } = Astro.props;
+const {
+  index,
+  title,
+  book,
+  part,
+  summary,
+  subject,
+  pages,
+  pageSourceUrl_Scribd,
+  videoId_YouTube,
+  summary_videoId_YouTube,
+  questions,
+  related,
+  dedication,
+} = page;
+
+const spaceId = import.meta.env.CONTENTFUL_SPACE_ID;
+const accessToken = import.meta.env.CONTENTFUL_ACCESS_TOKEN;
+---
+
+<Layout title={`${title} - הדף היומי בתלמוד עשר הספירות`}>
+  <section class="DYTES">
+    <section class="Header">
+      <a href="/" class="Logo">הדף היומי בתלמוד עשר הספירות</a>
+    </section>
+
+    <section class="Page">
+      <div class="page-toolbar">
+        <Navigation />
+        <Dedication client:visible content={dedication} />
+        <PageHead
+          currentIndex={currentIndex}
+          nextIndex={nextIndex}
+          prevIndex={prevIndex}
+          index={index}
+          title={title}
+          book={book}
+          part={part}
+          pages={pages}
+          subject={subject}
+        />
+      </div>
+      <div class="page-material">
+        <Summary client:visible content={summary} />
+        <Video content={videoId_YouTube} />
+        {summary_videoId_YouTube && (
+          <Video title="סיכום מקוצר" content={summary_videoId_YouTube} />
+        )}
+        <Questions client:visible content={questions} />
+      </div>
+      <div class="page-pdf">
+        <ScribdContainer client:visible title={title} url={pageSourceUrl_Scribd} />
+        <Feedback client:visible page={index} />
+      </div>
+      <div class="page-related">
+        <Related client:visible content={related} />
+        <UserRegistration client:visible />
+        <FlashList client:visible index={index} spaceId={spaceId} accessToken={accessToken} />
+      </div>
+      <Footer />
+    </section>
+  </section>
+</Layout>

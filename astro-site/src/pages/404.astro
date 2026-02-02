@@ -1,17 +1,19 @@
 ---
+/**
+ * 404 page - not found
+ */
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="דף לא נמצא">
-  <main style="max-width: 800px; margin: 0 auto; padding: 40px 20px; text-align: center;">
-    <div style="padding: 60px 20px;">
-      <h1 style="font-size: 6rem; color: #0066cc; margin-bottom: 10px;">404</h1>
-      <h2 style="font-size: 2rem; margin-bottom: 20px;">הדף לא נמצא</h2>
-      <p style="color: #666; margin-bottom: 30px; font-size: 1.2rem;">הדף שחיפשת אינו קיים או שהוסר.</p>
-      <nav style="display: flex; justify-content: center; gap: 20px;">
-        <a href="/" style="padding: 12px 24px; background: #0066cc; color: white; border-radius: 4px;">לדף הבית</a>
-        <a href="/toc" style="padding: 12px 24px; background: #0066cc; color: white; border-radius: 4px;">תוכן העניינים</a>
-      </nav>
-    </div>
-  </main>
+<Layout title="דף לא נמצא - הדף היומי בתלמוד עשר הספירות">
+  <section class="DYTES">
+    <section class="Header">
+      <a href="/" class="Logo">הדף היומי בתלמוד עשר הספירות</a>
+    </section>
+    <section class="Page" style="text-align: center; padding: 40px;">
+      <h1>404 - דף לא נמצא</h1>
+      <p>הדף שחיפשת לא נמצא.</p>
+      <p><a href="/">חזרה לדף הראשי</a></p>
+    </section>
+  </section>
 </Layout>

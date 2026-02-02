@@ -1,0 +1,17 @@
+---
+import type { PageFields } from '../lib/contentful';
+
+interface Props {
+  page: PageFields;
+}
+
+const { page } = Astro.props;
+const { index, title } = page;
+---
+
+<p class="PageEntry">
+  <a href={`/page/${index}`} class="page-link">
+    <strong>שיעור {index}</strong>
+    &mdash; {title}
+  </a>
+</p>

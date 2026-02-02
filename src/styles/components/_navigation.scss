@@ -1,3 +1,6 @@
+@use "sass:math";
+@use "../config" as *;
+
 .Navigation {
     position: absolute;
     display: flex;
@@ -19,7 +22,7 @@
 
         a {
             display: inline-block;
-            margin: 4px $master-gutter/2;
+            margin: 4px math.div($master-gutter, 2);
             color: #999;
             border-color: #999;
         }

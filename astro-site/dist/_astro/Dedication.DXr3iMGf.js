@@ -1,1 +1,0 @@
-import{j as r}from"./jsx-runtime.TBa3i5EZ.js";import{r as t}from"./rich-text-react-renderer.es5.D1Vgn1LL.js";import"./index.CVf8TyFT.js";function s({content:e}){return e?r.jsx("section",{className:"Dedication",children:t.documentToReactComponents(e)}):null}export{s as default};

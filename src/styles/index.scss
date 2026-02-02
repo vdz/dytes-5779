@@ -1,26 +1,26 @@
-@import './../../node_modules/reset-css/sass/reset';
-@import './config';
-@import './typography';
-@import './page';
-@import './toc-page';
-@import './poster-grid';
-@import './elements';
-@import './components/content';
-@import './components/header';
-@import './components/footer';
-@import './components/page-head';
-@import './components/navigation';
-@import './components/scribd';
-@import './components/summary';
-@import './components/questions';
-@import './components/video';
-@import './components/front-page';
-@import './components/user-registration';
-@import './components/feedback';
-@import './components/_dedication';
-@import './components/_flashes.scss';
-@import './components/related';
-@import './responsive';
+@use 'reset-css/sass/reset';
+@use './config' as *;
+@use './typography' as *;
+@use './page' as *;
+@use './toc-page' as *;
+@use './poster-grid' as *;
+@use './elements' as *;
+@use './components/content' as *;
+@use './components/header' as *;
+@use './components/footer' as *;
+@use './components/page-head' as *;
+@use './components/navigation' as *;
+@use './components/scribd' as *;
+@use './components/summary' as *;
+@use './components/questions' as *;
+@use './components/video' as *;
+@use './components/front-page' as *;
+@use './components/user-registration' as *;
+@use './components/feedback' as *;
+@use './components/dedication' as *;
+@use './components/flashes' as *;
+@use './components/related' as *;
+@use './responsive' as *;
 
 * {
     -webkit-overflow-scrolling: touch;
@@ -44,15 +44,15 @@ body {
     -ms-font-feature-settings: "kern", "liga", "clig", "calt";
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
     font-feature-settings: "kern", "liga", "clig", "calt";
-  }
+}
 
-  .DYTES {
-      display: grid;
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      overflow: auto;
-      border-top: 5px solid $color-2nd;
-  }
+.DYTES {
+    display: grid;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+    border-top: 5px solid $color-2nd;
+}

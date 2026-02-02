@@ -1,3 +1,8 @@
+@use "sass:math";
+@use "../config" as *;
+@use "../typography" as *;
+@use "../poster-grid"; // for %quick-title
+
 .Front {
     .title {
         font-weight: $f-light;
@@ -14,7 +19,7 @@
         font-family: $font-base-serif;
         border-bottom: 1px solid $color-accent-secondary;
         border-top: 1px solid $color-accent-secondary;
-        padding: $master-gutter 10% $master-gutter/2;
+        padding: $master-gutter 10% math.div($master-gutter, 2);
 
         &:before {
             @extend %quick-title;
@@ -28,6 +33,6 @@
         text-align: center;
         font-size: 0.85rem;
         color: #999;
-        padding: $master-gutter 10% $master-gutter/2;
+        padding: $master-gutter 10% math.div($master-gutter, 2);
     }
 }

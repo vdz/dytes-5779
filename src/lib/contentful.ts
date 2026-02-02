@@ -8,8 +8,8 @@ import * as contentfulModule from 'contentful';
 const contentful = (contentfulModule as any).default || contentfulModule;
 
 const client = contentful.createClient({
-    space: import.meta.env.CONTENTFUL_SPACE_ID,
-    accessToken: import.meta.env.CONTENTFUL_ACCESS_TOKEN,
+    space: import.meta.env.CONTENTFUL_SPACE,
+    accessToken: import.meta.env.CONTENTFUL_DELIVERY_TOKEN,
 });
 
 // Type definitions for Contentful content
